@@ -1,0 +1,283 @@
+// Bootstrap Grid
+@import 'grid';
+
+// Bootstrap reset
+@import 'reboot';
+
+$bodyColor: #2D2D2D;
+$backgroundColor: #FFFFFF;
+
+$smallMax: 767px;
+$mediumMax: 991px;
+
+body {
+	font-family: 'Source Sans Pro', 'Arial', sans-serif;
+	color: $bodyColor;
+	background-color: $backgroundColor;
+	font-size: 1rem;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	text-decoration: underline;
+	color: $bodyColor;
+
+	&:hover {
+		background-color: $bodyColor;
+		color: $backgroundColor;
+	}
+}
+
+.clearfix {
+	clear: both;
+}
+
+header {
+	padding-top: 100px;
+	min-height: 100vh;
+
+	@media all and (max-width: $smallMax) {
+		padding-top: 40px;
+	}
+
+	img.me {
+		width: 75px;
+		height: 75px;
+		border-radius: 50%;
+		margin: 0 0.5rem 0.5rem	 0;
+	}
+
+	h1 {
+		margin: 0 0 0rem;
+		font-weight: 600;
+		font-size: 2.25rem;
+	}
+
+	p {
+		font-size: 1.6rem;
+		line-height: 2em;
+		margin: 0 0 6rem;
+
+		@media all and (max-width: $smallMax) {
+			margin: 0 0 3rem;
+		}
+
+		@media all and (max-width: $mediumMax) {
+			br.hidden-sm-down {
+				display: none;
+			}
+		}
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+
+		li {
+			font-size: 1.6rem;
+			line-height: 2em;
+		}
+	}
+
+	div.right {
+		text-align: right;
+		padding-top: 18px;
+
+		div.image-container {
+			padding-top: 2rem;
+
+			img {
+				max-width: 100%;
+				max-height: 60vh;
+			}
+
+			div.caption {
+				padding: 0.5rem 0;
+				font-size: 0.9rem;
+			}
+
+			a#refresh-photo {
+				cursor: pointer;
+				text-decoration: underline;
+
+				&:hover {
+					color: white;
+				}
+			}
+
+			@media all and (max-width: $smallMax) {
+				text-align: center;
+			}
+		}
+
+		a.email {
+			@media all and (max-width: $smallMax) {
+				display: none;
+			}
+		}
+	}
+
+	ul.social {
+		li {
+			line-height: initial;
+
+			a {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+
+span.languages {
+	display: inline-block;
+	font-weight: 400;
+}
+
+section {
+	h2 {
+		font-size: 1.6rem;
+		font-weight: 600;
+		margin: 6rem 0 2rem;
+	}
+
+	h3 {
+		font-size: 1.25rem;
+		font-weight: 600;
+		margin: 0 0 0.5rem;
+	}
+
+	h4 {
+		font-size: 1rem;
+		font-weight: 400;
+		margin: 0 0 1rem;
+	}
+
+	div.year {
+		text-align: right;
+
+		@media all and (max-width: $smallMax) {
+			text-align: left;
+			margin: 0 0 1rem;
+		}
+	}
+
+	div.job {
+		margin-bottom: 3rem;
+	}
+}
+
+section#recent-work {
+	h3 {
+		font-size: 2.5rem;
+		margin: 0 0 1rem;
+	}
+
+	div.project {
+		margin-bottom: 4rem;
+	}
+
+	p {
+		margin: 0 0 2rem;
+	}
+
+	div.tags {
+		margin: 1.5rem 0 0;
+
+		span.tag {
+			display: inline-block;
+			padding: 3px 6px 3px 16px;
+			margin: 0 3px 0.5rem;
+			border: 1px solid #EFEFEF;
+			border-top-left-radius: 10px;
+			border-bottom-left-radius: 10px;
+			font-size: 0.8rem;
+
+			&:before {
+				content: "";
+				width: 4px;
+				height: 4px;
+				background-color: #CCCCCC;
+				border-radius: 50%;
+				display: inline-block;
+				position: relative;
+				left: -8px;
+				top: -2px;
+			}
+
+			&.date {
+				border: none;
+				font-size: 1rem;
+
+				&:before {
+					content: "\f017";
+					font-family: "FontAwesome";
+					width: auto;
+					height: auto;
+					background-color: transparent;
+					border-radius: 0;
+					top: 0;
+				}
+			}
+		}
+	}
+
+	a.btn {
+		display: inline-block;
+		padding: 6px 14px;
+		margin: 0 0.5rem 0.5rem 0;
+		text-decoration: none;
+		font-size: 1.1rem;
+
+		&.btn-project {
+			background-color: #EFEFEF;
+			color: $bodyColor;
+
+			&:hover {
+				background-color: #CCCCCC;
+				color: $bodyColor;
+			}
+		}
+
+		&.btn-source {
+			background-color: #000000;
+			color: white;
+
+			&:hover {
+				background-color: #2D2D2D;
+				color: white;
+			}
+		}
+	}
+}
+
+footer {
+	text-align: center;
+	padding-top: 60px;
+	padding-bottom: 100px;
+
+	h2 {
+		font-weight: 400;
+		margin: 0 0 2rem;
+	}
+}
+
+ul.social {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		display: inline-block;
+
+		a {
+			font-size: 2rem;
+			padding: 0 0.5rem;
+
+			&:hover {
+				color: $bodyColor;
+				background-color: transparent;
+			}
+		}
+	}
+}
